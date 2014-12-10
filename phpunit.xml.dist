@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="tests/bootstrap.php" colors="true">
+    <testsuites>
+        <testsuite name="php-kissmetrics-api Test Suite">
+            <directory>tests/KISSmetrics/</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">lib/KISSmetrics/</directory>
+        </whitelist>
+    </filter>
+</phpunit>

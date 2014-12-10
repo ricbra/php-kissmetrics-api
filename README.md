@@ -1,4 +1,4 @@
-## Discogs Api
+## KISSmetrics Api
 
 [![Build Status](https://secure.travis-ci.org/ricbra/php-kissmetrics-api.png)](http://travis-ci.org/ricbra/php-kissmetrics-api)
 [![Latest Stable Version](https://poser.pugx.org/ricbra/php-kissmetrics-api/v/stable.svg)](https://packagist.org/packages/ricbra/php-kissmetrics-api)

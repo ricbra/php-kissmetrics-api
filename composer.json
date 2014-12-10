@@ -2,7 +2,7 @@
     "name": "ricbra/php-kissmetrics-api",
     "description": "Guzzle based implementation of KISSmetrics REST API",
     "type": "library",
-    "keywords": ["kissmetrics", "api"],
+    "keywords": ["KISSmetrics", "api"],
     "license": "MIT",
     "require": {
         "php": ">=5.4.0",

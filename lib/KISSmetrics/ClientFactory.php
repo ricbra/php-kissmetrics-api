@@ -30,10 +30,15 @@ class ClientFactory
         $description    = new Description($service);
         $client         = new GuzzleClient($client, $description);
 
-        // Inject key
+        // Inject key & convert bools to int so false doesnt get lost
         $client->getEmitter()->on('prepare', function (PrepareEvent $event) use ($apiKey) {
             $command = $event->getCommand();
             $command['_k'] = $apiKey;
+            foreach ($command->toArray() as $key => $value) {
+                if (is_bool($value)) {
+                    $command[$key] = (int) $value;
+                }
+            }
         }, 'first');
 
         return $client;

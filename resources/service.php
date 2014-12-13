@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of the php-discogs-api.
+ * This file is part of the php-kissmetrics-api.
  *
  * (c) Richard van den Brand <richard@vandenbrand.org>
  *

@@ -11,7 +11,7 @@
 namespace KISSmetrics;
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Command\Event\PrepareEvent;
+use GuzzleHttp\Command\Event\InitEvent;
 use GuzzleHttp\Command\Guzzle\Description;
 use GuzzleHttp\Command\Guzzle\GuzzleClient;
 
@@ -31,7 +31,7 @@ class ClientFactory
         $client         = new GuzzleClient($client, $description);
 
         // Inject key & convert bools to int so false doesnt get lost
-        $client->getEmitter()->on('prepare', function (PrepareEvent $event) use ($apiKey) {
+        $client->getEmitter()->on('init', function (InitEvent $event) use ($apiKey) {
             $command = $event->getCommand();
             $command['_k'] = $apiKey;
             foreach ($command->toArray() as $key => $value) {
